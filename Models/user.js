@@ -37,6 +37,6 @@ const makeUser = async () => {
   })
   const res = await u.save()
   console.log(res)
-}
+};
 
 makeUser();
