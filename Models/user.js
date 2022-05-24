@@ -14,6 +14,7 @@ const userSchema = new mongoose.Schema({
   last: String,
   addresses: [
     {
+      _id: {id: false},
       street: String,
       city: String,
       state: String,
@@ -38,5 +39,9 @@ const makeUser = async () => {
   const res = await u.save()
   console.log(res)
 };
+
+const addAddress = async(id) => {
+  const user = await User.findById(id);
+}
 
 makeUser();
