@@ -25,4 +25,4 @@ Product.insertMany([
   {name: 'Goddess Melon', price: 4.99, season: 'Summer'},
   {name: 'Sugar Baby Watermelon', price: 4.99, season: 'Summer'},
   {name: 'Asparagus', price: 3.99, season: 'Spring'},
-])
+]);
