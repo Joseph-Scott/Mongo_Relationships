@@ -18,12 +18,13 @@ const userSchema = new Schema({
 const tweetSchema = new Schema({
   text: String,
   likes: Number,
-  
+  user: {type: Schema.Types.ObjectId, ref: 'User' }
 
 })
 
-const farmSchema = new Schema({
-  name: String,
-  city: String,
-  products: [{ type: Schema.Types.ObjectId, ref: 'Product' }]
-});
+const User = mongoose.model('User', userSchema);
+const Tweet = mongoose.model('Tweet', tweetSchema);
+
+const makeTweets = async () => {
+  const u = new User({user})
+}
